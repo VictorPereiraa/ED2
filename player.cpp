@@ -34,7 +34,7 @@ string Player::getTime() const{
     return time; 
 }
  
-void Player::setNome(string s){
+/*void Player::setNome(string s){
     nome = s;
 }
 
@@ -47,5 +47,14 @@ void Player::setAltura(float f){
 }
  
 void Player::setTime(string t){
-    time = t;
+    team = t;
+}*/
+
+Player::Player(const Player& obj){
+    nome = obj->nome;
+    idade = obj->idade;
+}
+
+int Player::getHash(int max_number)const{
+    return getNome()*getIdade()*getTime() % max_number;
 }

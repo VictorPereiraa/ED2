@@ -22,12 +22,13 @@ private:
 protected:
     int getGols()const;
 public:
+    Atacante(string nome, int idade, float altura, string team, int golsMarcados);
+    int getGols()const;
+    //void setGols(int g); 
+    void print() const;
 
-    Atacante(string nome, int idade = 0, int golsMarcados = 0);
-    //int getGols()const;
-    void setGols(int g); //IMPLEMENTAR
-
-
+    Atacante(const Atacante &obj);
+    virtual int getHash(int max_number)const;
 
 
 };

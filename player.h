@@ -20,25 +20,27 @@ using namespace std;
 class Player {
 private:
     float altura;
-    string time;
-
+  
 protected:
     string nome;
     int idade;
+    string time;
     
 public:
     Player(string nome = "A", int idade = 0, float altura = 0.0, string time = "B");
     string getNome()const;
-    int getIdade()const;    
-    float getAltura()const; 
+    int getIdade()const;
+    float getAltura()const;
     string getTime()const;
 
-    void setNome(string s);
-    void setIdade(int i);
-    void setAltura(float f);
-    void setTime(string t);
-    
-    void print()const;
+    //void setNome(string s);
+    //void setIdade(int i);
+    //void setAltura(float f);
+    //void setTime(string t);
+
+    Player(const Player &obj);
+    int getHash(int max_number);
+    virtual void print()const;
 
 };
 

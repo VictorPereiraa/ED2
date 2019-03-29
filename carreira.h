@@ -20,13 +20,13 @@ private:
     int totalDePartidas;
     
 public:
-    Carreira(string nome,int totalDePartidas = 0);
+    Carreira(string nome, int idade, float altura, string time, int totalDePartidas);
     
     int getTotalDePartidas()const;
     float aproveitamento()const;      //Partidas jogadas / Temporada
-    void setTotalDePartidas(int i);
-    
-    void printTemporada()const;  
+    //void setTotalDePartidas(int i);
+    virtual int getHash(int max_number)const;
+    void print()const;  
     
 };
 
